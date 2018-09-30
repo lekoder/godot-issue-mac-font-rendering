@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://menu/MouseLayer.gd" type="Script" id=1]
+[ext_resource path="res://hud/cursor.png" type="Texture" id=2]
+[ext_resource path="res://menu/Mouse.gd" type="Script" id=3]
+
+[node name="MouseLayer" type="CanvasLayer"]
+pause_mode = 2
+layer = 9
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+fadeTime = 3.0
+
+[node name="Mouse" type="Sprite" parent="."]
+self_modulate = Color( 8, 8, 8, 1 )
+show_behind_parent = true
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 3 )
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+
